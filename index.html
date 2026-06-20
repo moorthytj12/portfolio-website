@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moorthy X — Graphic Designer | Coonoor, The Nilgiris</title>
+<meta name="description" content="Moorthy X is a graphic designer based in the Nilgiris, India, crafting brand identities, packaging, social content and UI/UX work for Dizen Pulse, AM Enterprises and beyond.">
+<meta name="theme-color" content="#06070A">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Moorthy X — Graphic Designer">
+<meta property="og:description" content="From doodles in the margins to brands with a pulse. Portfolio of Moorthy X, graphic designer based in the Nilgiris, India.">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2306070A'/%3E%3Cpath d='M22 76 L22 26 L50 56 L78 26 L78 76' fill='none' stroke='%2354E9FF' stroke-width='9' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   MOORTHY X — PORTFOLIO DESIGN SYSTEM
+   Theme: Nilgiri Glass — dark luxury, misted ambient light,
+   doodle → vector personal narrative.
+   ============================================================ */
+
+:root{
+  /* --- color tokens --- */
+  --void:        #06070A;
+  --base:        #0A0C12;
+  --surface:     #12141C;
+  --surface-2:   #181B25;
+  --glass-fill:    rgba(255,255,255,0.045);
+  --glass-fill-2:  rgba(255,255,255,0.07);
+  --glass-border:  rgba(255,255,255,0.10);
+  --glass-border-strong: rgba(255,255,255,0.18);
+  --platinum:    #ECEEF3;
+  --mist:        #99A0B2;
+  --mist-dim:    #6B7180;
+  --cyan:        #58E7FF;
+  --violet:      #8E7CFF;
+  --violet-deep: #5C4DCB;
+  --hairline:    rgba(255,255,255,0.08);
+  --success:     #6CE2A8;
+
+  /* --- type --- */
+  --font-display: 'Bricolage Grotesque', sans-serif;
+  --font-body:    'Manrope', sans-serif;
+  --font-mono:    'Space Mono', monospace;
+
+  /* --- shape / motion --- */
+  --radius-s:  10px;
+  --radius-m:  18px;
+  --radius-l:  28px;
+  --ease-out:  cubic-bezier(.16,1,.3,1);
+  --ease-soft: cubic-bezier(.4,0,.2,1);
+}
+
+*,*::before,*::after{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior:auto; }
+  *,*::before,*::after{ animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; scroll-behavior:auto !important; }
+}
+
+html,body{ margin:0; padding:0; }
+body{
+  background:var(--void);
+  color:var(--platinum);
+  font-family:var(--font-body);
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+  position:relative;
+}
+
+::selection{ background:var(--violet); color:var(--void); }
+
+a{ color:inherit; text-decoration:none; }
+ul{ list-style:none; margin:0; padding:0; }
+button{ font-family:inherit; }
+img,svg{ display:block; max-width:100%; }
+
+h1,h2,h3,h4{ font-family:var(--font-display); margin:0; font-weight:600; letter-spacing:-0.02em; color:var(--platinum); }
+p{ margin:0; }
+
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{
+  outline:2px solid var(--cyan);
+  outline-offset:3px;
+  border-radius:4px;
+}
+
+.skip-link{
+  position:absolute; left:-9999px; top:0; z-index:999;
+  background:var(--surface); color:var(--platinum);
+  padding:14px 20px; border-radius:0 0 10px 0;
+  font-family:var(--font-mono); font-size:13px;
+}
+.skip-link:focus{ left:0; }
+
+/* --- layout helpers --- */
+.container{
+  width:100%;
+  max-width:1240px;
+  margin:0 auto;
+  padding:0 32px;
+}
+@media (max-width:640px){ .container{ padding:0 22px; } }
+
+section{ position:relative; padding:148px 0; }
+@media (max-width:900px){ section{ padding:100px 0; } }
+@media (max-width:560px){ section{ padding:84px 0; } }
+
+.eyebrow{
+  font-family:var(--font-mono);
+  font-size:12.5px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--cyan);
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:22px;
+}
+.eyebrow::before{
+  content:"";
+  width:26px; height:1px;
+  background:linear-gradient(90deg,var(--cyan),transparent);
+}
+
+.section-head{ max-width:680px; margin-bottom:64px; }
+.section-head h2{ font-size:clamp(2rem, 3.4vw, 2.9rem); line-height:1.12; }
+.section-head .lede{ margin-top:18px; color:var(--mist); font-size:1.05rem; max-width:560px; }
+
+/* --- glass surfaces --- */
+.glass{
+  position:relative;
+  background:linear-gradient(155deg, var(--glass-fill-2), var(--glass-fill) 60%);
+  border:1px solid var(--glass-border);
+  border-radius:var(--radius-l);
+  backdrop-filter:blur(22px) saturate(140%);
+  -webkit-backdrop-filter:blur(22px) saturate(140%);
+  box-shadow:
+    0 1px 0 0 rgba(255,255,255,0.06) inset,
+    0 30px 60px -30px rgba(0,0,0,0.65);
+  overflow:hidden;
+}
+.glass::before{
+  /* glossy diagonal highlight */
+  content:"";
+  position:absolute; inset:0;
+  background:linear-gradient(120deg, rgba(255,255,255,0.10) 0%, rgba(255,255,255,0) 28%);
+  pointer-events:none;
+}
+.glass::after{
+  content:"";
+  position:absolute; top:-1px; left:6%; right:6%; height:1px;
+  background:linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
+  pointer-events:none;
+}
+
+/* --- buttons --- */
+.btn{
+  --bx:0; --by:0;
+  position:relative;
+  display:inline-flex; align-items:center; justify-content:center; gap:10px;
+  padding:15px 28px;
+  font-family:var(--font-body); font-weight:700; font-size:.95rem;
+  border-radius:100px;
+  cursor:pointer; border:1px solid transparent;
+  transition:transform .35s var(--ease-out), box-shadow .35s var(--ease-out), background .35s var(--ease-out), border-color .35s;
+  transform:translate(calc(var(--bx)*1px), calc(var(--by)*1px));
+  white-space:nowrap;
+}
+.btn-primary{
+  background:linear-gradient(135deg, var(--cyan), var(--violet));
+  color:#06070A;
+  box-shadow:0 12px 32px -10px rgba(88,231,255,0.45);
+}
+.btn-primary:hover{ box-shadow:0 16px 40px -8px rgba(142,124,255,0.55); }
+.btn-ghost{
+  background:var(--glass-fill);
+  border:1px solid var(--glass-border-strong);
+  color:var(--platinum);
+}
+.btn-ghost:hover{ background:var(--glass-fill-2); border-color:rgba(255,255,255,0.32); }
+.btn svg{ width:16px; height:16px; flex-shrink:0; }
+
+/* --- chips --- */
+.chip{
+  display:inline-flex; align-items:center; gap:8px;
+  font-family:var(--font-mono); font-size:12.5px; letter-spacing:.03em;
+  padding:9px 16px;
+  border-radius:100px;
+  background:var(--glass-fill);
+  border:1px solid var(--glass-border);
+  color:var(--mist);
+}
+
+/* --- ambient backdrop (mist blobs + grain) --- */
+.ambient{ position:fixed; inset:0; z-index:0; pointer-events:none; overflow:hidden; }
+.ambient .blob{
+  position:absolute; border-radius:50%;
+  filter:blur(110px);
+  opacity:.5;
+  will-change:transform;
+}
+.blob-cyan{ width:640px; height:640px; top:-220px; left:-160px; background:radial-gradient(circle, var(--cyan), transparent 70%); opacity:.16; }
+.blob-violet{ width:720px; height:720px; top:280px; right:-260px; background:radial-gradient(circle, var(--violet), transparent 70%); opacity:.18; }
+.blob-violet-2{ width:560px; height:560px; bottom:-180px; left:10%; background:radial-gradient(circle, var(--violet-deep), transparent 70%); opacity:.16; }
+
+.grain{
+  position:fixed; inset:-200px; z-index:1; pointer-events:none;
+  opacity:.035; mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.cursor-glow{
+  position:fixed; top:0; left:0; width:520px; height:520px;
+  border-radius:50%;
+  background:radial-gradient(circle, rgba(88,231,255,0.10), transparent 65%);
+  transform:translate(-50%,-50%);
+  pointer-events:none; z-index:2;
+  transition:opacity .4s ease;
+  mix-blend-mode:screen;
+}
+
+main, header, footer{ position:relative; z-index:3; }
+
+/* ============================================================
+   NAV
+   ============================================================ */
+.site-nav{
+  position:fixed; top:0; left:0; right:0; z-index:50;
+  padding:20px 0;
+  transition:padding .4s var(--ease-soft), background .4s, border-color .4s;
+  border-bottom:1px solid transparent;
+}
+.site-nav.scrolled{
+  padding:13px 0;
+  background:rgba(8,9,13,0.72);
+  backdrop-filter:blur(18px) saturate(140%);
+  -webkit-backdrop-filter:blur(18px) saturate(140%);
+  border-bottom:1px solid var(--hairline);
+}
+.nav-row{ display:flex; align-items:center; justify-content:space-between; gap:24px; }
+.brand{ display:flex; align-items:center; gap:10px; font-family:var(--font-display); font-weight:700; font-size:1.05rem; letter-spacing:-.01em; }
+.brand-mark{
+  width:34px; height:34px; border-radius:9px;
+  background:linear-gradient(155deg, var(--surface-2), var(--surface));
+  border:1px solid var(--glass-border);
+  display:flex; align-items:center; justify-content:center;
+}
+.brand-mark svg{ width:16px; height:16px; }
+
+.nav-links{ display:flex; align-items:center; gap:36px; }
+.nav-links a{
+  font-size:.86rem; font-weight:600; color:var(--mist);
+  position:relative; padding:4px 0;
+  transition:color .25s;
+}
+.nav-links a::after{
+  content:""; position:absolute; left:0; right:100%; bottom:-2px; height:1px;
+  background:linear-gradient(90deg,var(--cyan),var(--violet));
+  transition:right .3s var(--ease-out);
+}
+.nav-links a:hover{ color:var(--platinum); }
+.nav-links a:hover::after{ right:0; }
+
+.nav-cta{ display:flex; align-items:center; gap:16px; }
+.nav-cta .btn{ padding:11px 22px; font-size:.84rem; }
+
+.nav-toggle{
+  display:none; width:42px; height:42px; border-radius:10px;
+  background:var(--glass-fill); border:1px solid var(--glass-border);
+  align-items:center; justify-content:center; cursor:pointer;
+}
+.nav-toggle span, .nav-toggle span::before, .nav-toggle span::after{
+  content:""; display:block; width:16px; height:1.5px; background:var(--platinum);
+  position:relative; transition:transform .3s, opacity .3s;
+}
+.nav-toggle span::before{ position:absolute; top:-5px; }
+.nav-toggle span::after{ position:absolute; top:5px; }
+.nav-toggle.open span{ background:transparent; }
+.nav-toggle.open span::before{ transform:translateY(5px) rotate(45deg); }
+.nav-toggle.open span::after{ transform:translateY(-5px) rotate(-45deg); }
+
+@media (max-width:880px){
+  .nav-links, .nav-cta .btn-ghost{ display:none; }
+  .nav-toggle{ display:flex; }
+  .mobile-menu{
+    position:fixed; top:0; right:0; bottom:0; width:min(82vw,360px);
+    background:rgba(10,11,16,0.97); backdrop-filter:blur(20px);
+    border-left:1px solid var(--hairline);
+    transform:translateX(100%); transition:transform .45s var(--ease-out);
+    z-index:60; padding:100px 32px 32px; display:flex; flex-direction:column; gap:8px;
+  }
+  .mobile-menu.open{ transform:translateX(0); }
+  .mobile-menu a{ font-family:var(--font-display); font-size:1.5rem; padding:14px 0; border-bottom:1px solid var(--hairline); color:var(--platinum); }
+  .menu-scrim{ position:fixed; inset:0; background:rgba(0,0,0,0.5); opacity:0; pointer-events:none; transition:opacity .4s; z-index:55; }
+  .menu-scrim.open{ opacity:1; pointer-events:auto; }
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{
+  min-height:100vh;
+  display:flex; align-items:center;
+  padding-top:160px; padding-bottom:80px;
+}
+.hero-grid{
+  display:grid; grid-template-columns:1.15fr .85fr; gap:60px; align-items:center;
+}
+@media (max-width:980px){ .hero-grid{ grid-template-columns:1fr; } }
+
+.hero-eyebrow{
+  font-family:var(--font-mono); font-size:12.5px; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--mist); display:flex; align-items:center; gap:10px; margin-bottom:26px;
+}
+.hero-eyebrow .dot{ width:6px; height:6px; border-radius:50%; background:var(--success); box-shadow:0 0 12px var(--success); }
+
+.hero h1{
+  font-size:clamp(2.6rem, 5.4vw, 4.9rem);
+  line-height:1.04;
+  font-weight:560;
+}
+.hero h1 .accent{
+  background:linear-gradient(100deg, var(--cyan), var(--violet) 80%);
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+
+.hero-sub{
+  margin-top:28px; font-size:1.1rem; line-height:1.7; color:var(--mist); max-width:520px;
+}
+.hero-sub b{ color:var(--platinum); font-weight:700; }
+
+.hero-actions{ display:flex; align-items:center; gap:18px; flex-wrap:wrap; margin-top:42px; }
+.hero-link-sub{ font-family:var(--font-mono); font-size:12.5px; color:var(--mist-dim); display:inline-flex; align-items:center; gap:6px; }
+.hero-link-sub:hover{ color:var(--cyan); }
+
+.hero-tags{ display:flex; gap:12px; flex-wrap:wrap; margin-top:46px; }
+
+/* hero visual: badge + floating chips */
+.hero-visual{ position:relative; min-height:440px; display:flex; align-items:center; justify-content:center; }
+.badge-orbit{
+  position:relative; width:300px; height:300px;
+  display:flex; align-items:center; justify-content:center;
+}
+.badge-ring{
+  position:absolute; inset:0; border-radius:50%;
+  border:1px dashed var(--glass-border);
+  animation:spin 38s linear infinite;
+}
+@keyframes spin{ to{ transform:rotate(360deg); } }
+.badge-glass{
+  width:230px; height:230px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  position:relative;
+}
+.badge-glass svg{ width:140px; height:140px; }
+
+.sketch-path{
+  fill:none; stroke:var(--mist); stroke-width:3.4; stroke-linecap:round; stroke-linejoin:round;
+  stroke-dasharray:420; stroke-dashoffset:420;
+  animation:draw-sketch 2.1s var(--ease-out) forwards, fade-sketch 1s ease 2.3s forwards;
+}
+.clean-path{
+  fill:none; stroke:url(#mGrad); stroke-width:9; stroke-linecap:round; stroke-linejoin:round;
+  stroke-dasharray:420; stroke-dashoffset:420;
+  opacity:0;
+  animation:draw-clean 1.3s var(--ease-out) 1.85s forwards, fade-clean 0.6s ease 1.85s forwards;
+}
+@keyframes draw-sketch{ to{ stroke-dashoffset:0; } }
+@keyframes fade-sketch{ to{ opacity:0; } }
+@keyframes draw-clean{ to{ stroke-dashoffset:0; } }
+@keyframes fade-clean{ to{ opacity:1; } }
+
+@media (prefers-reduced-motion: reduce){
+  .sketch-path{ display:none; }
+  .clean-path{ opacity:1; stroke-dashoffset:0; animation:none; }
+}
+
+.float-chip{
+  position:absolute;
+  font-family:var(--font-mono); font-size:11.5px; letter-spacing:.04em;
+  padding:10px 16px; border-radius:100px;
+  display:flex; align-items:center; gap:8px;
+  animation:float 7s ease-in-out infinite;
+}
+.float-chip svg{ width:13px; height:13px; }
+.fc-1{ top:6%; left:-4%; animation-delay:0s; }
+.fc-2{ top:16%; right:-8%; animation-delay:1.4s; }
+.fc-3{ bottom:14%; left:-10%; animation-delay:2.6s; }
+.fc-4{ bottom:2%; right:2%; animation-delay:.7s; }
+@keyframes float{ 0%,100%{ transform:translateY(0px); } 50%{ transform:translateY(-14px); } }
+@media (prefers-reduced-motion: reduce){ .float-chip{ animation:none; } .badge-ring{ animation:none; } }
+@media (max-width:980px){ .float-chip{ display:none; } .hero-visual{ min-height:300px; } }
+
+.scroll-cue{
+  position:absolute; bottom:36px; left:50%; transform:translateX(-50%);
+  display:flex; flex-direction:column; align-items:center; gap:10px;
+  font-family:var(--font-mono); font-size:10.5px; letter-spacing:.18em; text-transform:uppercase; color:var(--mist-dim);
+}
+.scroll-cue .line{ width:1px; height:34px; background:linear-gradient(var(--mist-dim), transparent); position:relative; overflow:hidden; }
+.scroll-cue .line::after{ content:""; position:absolute; top:-34px; left:0; width:1px; height:34px; background:linear-gradient(var(--cyan),transparent); animation:cue 2.4s ease-in-out infinite; }
+@keyframes cue{ to{ top:34px; } }
+@media (max-width:760px){ .scroll-cue{ display:none; } }
+
+/* ============================================================
+   REVEAL / SCROLL ANIMATION
+   ============================================================ */
+.reveal{ opacity:0; transform:translateY(34px); transition:opacity .9s var(--ease-out), transform .9s var(--ease-out); }
+.reveal.in-view{ opacity:1; transform:translateY(0); }
+@media (prefers-reduced-motion: reduce){ .reveal{ opacity:1; transform:none; transition:none; } }
+
+/* ============================================================
+   ABOUT
+   ============================================================ */
+.about-grid{ display:grid; grid-template-columns:1fr 1fr; gap:72px; align-items:start; }
+@media (max-width:900px){ .about-grid{ grid-template-columns:1fr; gap:46px; } }
+.about-copy p{ color:var(--mist); font-size:1.04rem; line-height:1.85; margin-bottom:22px; }
+.about-copy p b{ color:var(--platinum); }
+
+.pull-quote{
+  margin:34px 0; padding:26px 28px;
+  border-left:2px solid var(--cyan);
+  font-family:var(--font-display); font-style:italic; font-size:1.18rem; line-height:1.5;
+  color:var(--platinum);
+  background:linear-gradient(90deg, rgba(88,231,255,0.06), transparent);
+}
+.pull-quote span{ display:block; margin-top:12px; font-family:var(--font-mono); font-style:normal; font-size:11.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--mist-dim); }
+
+.about-cards{ display:flex; flex-direction:column; gap:18px; }
+.value-card{ padding:26px 28px; border-radius:var(--radius-m); }
+.value-card .vc-row{ display:flex; align-items:flex-start; gap:16px; }
+.value-card .vc-icon{
+  width:42px; height:42px; border-radius:11px; flex-shrink:0;
+  background:linear-gradient(155deg, rgba(88,231,255,0.16), rgba(142,124,255,0.12));
+  border:1px solid var(--glass-border);
+  display:flex; align-items:center; justify-content:center;
+}
+.value-card .vc-icon svg{ width:19px; height:19px; stroke:var(--cyan); }
+.value-card h3{ font-size:1.04rem; margin-bottom:6px; }
+.value-card p{ color:var(--mist); font-size:.92rem; line-height:1.6; }
+
+/* ============================================================
+   EXPERIENCE
+   ============================================================ */
+.timeline{ position:relative; }
+.timeline::before{
+  content:""; position:absolute; left:11px; top:8px; bottom:8px; width:1px;
+  background:linear-gradient(var(--glass-border-strong), var(--hairline) 90%, transparent);
+}
+@media (max-width:760px){ .timeline::before{ left:5px; } }
+
+.tl-item{ position:relative; padding-left:54px; margin-bottom:30px; }
+@media (max-width:760px){ .tl-item{ padding-left:34px; } }
+.tl-item:last-child{ margin-bottom:0; }
+.tl-dot{
+  position:absolute; left:0; top:30px; width:23px; height:23px; border-radius:50%;
+  background:var(--surface); border:1px solid var(--glass-border-strong);
+  display:flex; align-items:center; justify-content:center;
+}
+@media (max-width:760px){ .tl-dot{ width:11px; height:11px; top:26px; } }
+.tl-dot::after{ content:""; width:7px; height:7px; border-radius:50%; background:linear-gradient(135deg,var(--cyan),var(--violet)); }
+@media (max-width:760px){ .tl-dot::after{ width:5px; height:5px; } }
+
+.exp-card{ padding:30px 32px; border-radius:var(--radius-m); transition:border-color .35s, transform .4s var(--ease-out); }
+.exp-card:hover{ border-color:var(--glass-border-strong); transform:translateY(-3px); }
+.exp-head{ display:flex; flex-wrap:wrap; justify-content:space-between; gap:14px 24px; align-items:baseline; margin-bottom:6px; }
+.exp-title{ font-family:var(--font-display); font-size:1.22rem; font-weight:600; }
+.exp-meta{ font-family:var(--font-mono); font-size:11.5px; letter-spacing:.04em; color:var(--mist-dim); white-space:nowrap; }
+.exp-company{ font-size:.92rem; color:var(--cyan); font-weight:700; margin-bottom:14px; display:block; }
+.exp-desc{ color:var(--mist); font-size:.96rem; line-height:1.7; max-width:680px; }
+
+.exp-tags{ display:flex; flex-wrap:wrap; gap:9px; margin-top:18px; }
+.exp-tags .chip{ padding:6px 13px; font-size:11px; }
+
+.sub-roles{ margin-top:22px; padding-top:20px; border-top:1px solid var(--hairline); display:grid; grid-template-columns:repeat(2,1fr); gap:12px 26px; }
+@media (max-width:640px){ .sub-roles{ grid-template-columns:1fr; } }
+.sub-role{ display:flex; justify-content:space-between; gap:14px; font-size:.86rem; }
+.sub-role .sr-role{ color:var(--platinum); font-weight:600; }
+.sub-role .sr-date{ font-family:var(--font-mono); font-size:11px; color:var(--mist-dim); white-space:nowrap; }
+
+/* ============================================================
+   SKILLS
+   ============================================================ */
+.skills-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+@media (max-width:900px){ .skills-grid{ grid-template-columns:1fr; } }
+.skill-card{ padding:32px 30px; border-radius:var(--radius-m); }
+.skill-card .sk-icon{
+  width:46px; height:46px; border-radius:12px; margin-bottom:22px;
+  background:linear-gradient(155deg, rgba(88,231,255,0.14), rgba(142,124,255,0.10));
+  border:1px solid var(--glass-border);
+  display:flex; align-items:center; justify-content:center;
+}
+.skill-card .sk-icon svg{ width:21px; height:21px; stroke:var(--cyan); }
+.skill-card h3{ font-size:1.12rem; margin-bottom:6px; }
+.skill-card .sk-sub{ color:var(--mist-dim); font-size:.84rem; margin-bottom:20px; }
+.skill-list{ display:flex; flex-direction:column; gap:11px; }
+.skill-row{ display:flex; align-items:center; gap:11px; font-size:.91rem; color:var(--mist); }
+.skill-row::before{ content:""; width:5px; height:5px; border-radius:50%; background:linear-gradient(135deg,var(--cyan),var(--violet)); flex-shrink:0; }
+.skill-row b{ color:var(--platinum); font-weight:700; }
+
+/* ============================================================
+   CAPABILITIES / WORK
+   ============================================================ */
+.work-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:24px; }
+@media (max-width:860px){ .work-grid{ grid-template-columns:1fr; } }
+.work-card{ padding:36px 34px; border-radius:var(--radius-l); position:relative; }
+.work-card .wc-index{ font-family:var(--font-mono); font-size:11.5px; color:var(--mist-dim); letter-spacing:.1em; margin-bottom:18px; display:block; }
+.work-card h3{ font-size:1.5rem; margin-bottom:14px; }
+.work-card p{ color:var(--mist); font-size:.96rem; line-height:1.75; margin-bottom:24px; }
+.wc-steps{ display:flex; gap:10px; flex-wrap:wrap; }
+.wc-steps span{ font-family:var(--font-mono); font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--mist-dim); padding:7px 12px; border:1px solid var(--hairline); border-radius:100px; }
+.wc-steps span:not(:last-child)::after{ content:"→"; margin-left:10px; color:var(--cyan); }
+
+.work-cta{ margin-top:50px; padding:38px; border-radius:var(--radius-l); display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:24px; }
+.work-cta h3{ font-size:1.35rem; max-width:420px; }
+.work-cta p{ color:var(--mist); margin-top:8px; font-size:.92rem; }
+
+/* ============================================================
+   EDUCATION & CERTIFICATIONS
+   ============================================================ */
+.edu-grid{ display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+@media (max-width:860px){ .edu-grid{ grid-template-columns:1fr; } }
+.edu-card{ padding:34px 32px; border-radius:var(--radius-m); }
+.edu-card .edu-kicker{ font-family:var(--font-mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--mist-dim); margin-bottom:16px; }
+.edu-card h3{ font-size:1.22rem; margin-bottom:6px; }
+.edu-card .edu-sub{ color:var(--cyan); font-size:.9rem; font-weight:700; margin-bottom:4px; }
+.edu-card .edu-date{ font-family:var(--font-mono); font-size:11.5px; color:var(--mist-dim); }
+
+.cert-list{ display:flex; flex-direction:column; gap:14px; margin-top:18px; }
+.cert-item{ display:flex; align-items:flex-start; gap:14px; padding:16px 18px; border-radius:var(--radius-s); background:var(--glass-fill); border:1px solid var(--hairline); }
+.cert-item svg{ width:18px; height:18px; flex-shrink:0; margin-top:2px; stroke:var(--cyan); }
+.cert-item .ci-name{ font-size:.92rem; font-weight:700; color:var(--platinum); }
+.cert-item .ci-meta{ font-size:.8rem; color:var(--mist-dim); margin-top:2px; }
+
+/* ============================================================
+   TESTIMONIALS (placeholder, honest empty-state)
+   ============================================================ */
+.testi-wrap{ display:flex; justify-content:center; }
+.testi-card{
+  max-width:620px; width:100%; text-align:center; padding:56px 48px;
+  border-radius:var(--radius-l); border-style:dashed; border-color:var(--glass-border-strong);
+}
+.testi-card .tq{ width:34px; height:34px; margin:0 auto 22px; stroke:var(--cyan); }
+.testi-card h3{ font-size:1.3rem; margin-bottom:12px; }
+.testi-card p{ color:var(--mist); font-size:.96rem; line-height:1.7; max-width:440px; margin:0 auto 26px; }
+
+/* ============================================================
+   CONTACT
+   ============================================================ */
+.contact-grid{ display:grid; grid-template-columns:.85fr 1.15fr; gap:28px; align-items:stretch; }
+@media (max-width:900px){ .contact-grid{ grid-template-columns:1fr; } }
+.contact-card{ padding:38px 34px; border-radius:var(--radius-l); display:flex; flex-direction:column; gap:26px; }
+.contact-card h3{ font-size:1.3rem; }
+.contact-card .cc-sub{ color:var(--mist); font-size:.92rem; line-height:1.6; }
+.contact-list{ display:flex; flex-direction:column; gap:16px; margin-top:auto; }
+.contact-list a, .contact-list .ci-static{ display:flex; align-items:center; gap:14px; padding:14px 16px; border-radius:var(--radius-s); background:var(--glass-fill); border:1px solid var(--hairline); transition:border-color .3s, transform .3s; }
+.contact-list a:hover{ border-color:var(--glass-border-strong); transform:translateX(4px); }
+.contact-list svg{ width:17px; height:17px; stroke:var(--cyan); flex-shrink:0; }
+.contact-list .cl-label{ font-size:11px; font-family:var(--font-mono); color:var(--mist-dim); text-transform:uppercase; letter-spacing:.06em; }
+.contact-list .cl-value{ font-size:.92rem; font-weight:700; color:var(--platinum); }
+
+.contact-form{ padding:38px 34px; border-radius:var(--radius-l); }
+.form-row{ display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-bottom:18px; }
+@media (max-width:560px){ .form-row{ grid-template-columns:1fr; } }
+.field{ display:flex; flex-direction:column; gap:8px; }
+.field label{ font-family:var(--font-mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--mist-dim); }
+.field input, .field textarea{
+  background:rgba(255,255,255,0.03); border:1px solid var(--hairline); border-radius:var(--radius-s);
+  padding:14px 16px; color:var(--platinum); font-family:var(--font-body); font-size:.95rem;
+  transition:border-color .3s, background .3s;
+}
+.field input:focus, .field textarea:focus{ border-color:var(--cyan); background:rgba(255,255,255,0.05); outline:none; }
+.field textarea{ resize:vertical; min-height:130px; }
+.form-foot{ display:flex; align-items:center; justify-content:space-between; gap:18px; margin-top:8px; flex-wrap:wrap; }
+.form-note{ font-size:.8rem; color:var(--mist-dim); max-width:260px; }
+.form-status{ font-size:.84rem; color:var(--success); font-family:var(--font-mono); min-height:1em; }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.site-footer{ padding:64px 0 36px; border-top:1px solid var(--hairline); }
+.footer-top{ display:flex; flex-wrap:wrap; justify-content:space-between; gap:34px; margin-bottom:48px; }
+.footer-brand h3{ font-size:1.6rem; margin-bottom:10px; }
+.footer-brand p{ color:var(--mist); max-width:340px; font-size:.92rem; line-height:1.6; }
+.footer-links{ display:flex; gap:60px; flex-wrap:wrap; }
+.footer-col h4{ font-family:var(--font-mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--mist-dim); margin-bottom:16px; font-weight:600; }
+.footer-col a{ display:block; color:var(--mist); font-size:.9rem; padding:6px 0; transition:color .25s; }
+.footer-col a:hover{ color:var(--cyan); }
+.footer-bottom{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; padding-top:28px; border-top:1px solid var(--hairline); }
+.footer-bottom p{ font-size:.78rem; color:var(--mist-dim); font-family:var(--font-mono); }
+.back-top{ width:42px; height:42px; border-radius:50%; display:flex; align-items:center; justify-content:center; background:var(--glass-fill); border:1px solid var(--glass-border); transition:transform .3s, border-color .3s; }
+.back-top:hover{ transform:translateY(-3px); border-color:var(--glass-border-strong); }
+.back-top svg{ width:15px; height:15px; }
+
+/* misc */
+.text-grad{ background:linear-gradient(100deg, var(--cyan), var(--violet)); -webkit-background-clip:text; background-clip:text; color:transparent; }
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<div class="ambient" aria-hidden="true">
+  <div class="blob blob-cyan"></div>
+  <div class="blob blob-violet"></div>
+  <div class="blob blob-violet-2"></div>
+</div>
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+<!-- ============================== NAV ============================== -->
+<header class="site-nav" id="siteNav">
+  <div class="container nav-row">
+    <a href="#top" class="brand">
+      <span class="brand-mark">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 19V6l9 8 9-8v13" stroke="#58E7FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      Moorthy X
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#work">Capabilities</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#contact" class="btn btn-ghost">Let's Talk</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="menu-scrim" id="menuScrim"></div>
+<nav class="mobile-menu" id="mobileMenu" aria-label="Mobile">
+  <a href="#about">About</a>
+  <a href="#experience">Experience</a>
+  <a href="#skills">Skills</a>
+  <a href="#work">Capabilities</a>
+  <a href="#education">Education</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<main id="main">
+
+  <!-- ============================== HERO ============================== -->
+  <section class="hero" id="top">
+    <div class="container hero-grid">
+      <div>
+        <div class="hero-eyebrow"><span class="dot"></span> AVAILABLE FOR DESIGN WORK — COONOOR, THE NILGIRIS</div>
+        <h1 class="reveal in-view">From doodles in the margins<br>to <span class="accent">brands with a pulse.</span></h1>
+        <p class="hero-sub reveal in-view">I'm <b>Moorthy X</b> — a graphic designer who turns packaging, brand identity and digital experiences into stories that hold attention. Currently designing at <b>Dizen Pulse</b> and <b>Sankara College of Science and Commerce</b>, based in the misted hills of the Nilgiris.</p>
+        <div class="hero-actions reveal in-view">
+          <a href="#work" class="btn btn-primary">View Selected Work
+            <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#contact" class="btn btn-ghost">Start a Conversation</a>
+          <a href="https://moorthy-graphicdesigner.my.canva.site/" target="_blank" rel="noopener" class="hero-link-sub">Open Canva Portfolio ↗</a>
+        </div>
+        <div class="hero-tags reveal in-view">
+          <span class="chip">Brand Identity</span>
+          <span class="chip">Packaging Design</span>
+          <span class="chip">UI / UX</span>
+          <span class="chip">Social Content</span>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="badge-orbit">
+          <div class="badge-ring" aria-hidden="true"></div>
+          <div class="badge-glass glass" aria-hidden="true">
+            <svg viewBox="0 0 200 200">
+              <defs>
+                <linearGradient id="mGrad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#58E7FF"/>
+                  <stop offset="100%" stop-color="#8E7CFF"/>
+                </linearGradient>
+              </defs>
+              <path class="sketch-path" d="M38,148 Q45,120 42,95 Q50,70 41,52 Q70,75 98,108 Q100,112 102,108 Q130,76 158,52 Q150,80 159,100 Q165,125 161,149"/>
+              <path class="clean-path" d="M40,150 L40,50 L100,110 L160,50 L160,150"/>
+            </svg>
+          </div>
+          <div class="float-chip glass fc-1"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="#58E7FF" stroke-width="2"/></svg>Packaging</div>
+          <div class="float-chip glass fc-2"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#8E7CFF" stroke-width="2"/></svg>Branding</div>
+          <div class="float-chip glass fc-3"><svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h10" stroke="#58E7FF" stroke-width="2" stroke-linecap="round"/></svg>Editorial</div>
+          <div class="float-chip glass fc-4"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="3" stroke="#8E7CFF" stroke-width="2"/></svg>UI/UX</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-cue"><span>Scroll</span><span class="line"></span></div>
+  </section>
+
+  <!-- ============================== ABOUT ============================== -->
+  <section id="about">
+    <div class="container">
+      <div class="eyebrow">About</div>
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <p>Long before I called myself a designer, I was the kid who couldn't leave a blank page alone. Notebook margins turned into logo sketches. While other kids played outside, I was busy inventing imaginary brands and drawing characters that didn't exist anywhere but my head.</p>
+          <div class="pull-quote">"No matter what the assignment is, they always find a way to turn it into an art project."<span>— a teacher's note I never forgot</span></div>
+          <p>That habit never really left — it just grew up. I studied design principles, worked inside branding projects that shape how a company is seen and understood, and learned that good design isn't the version that looks finished. It's the one that <b>communicates, engages and leaves an impression.</b></p>
+          <p>Today my craft sits across packaging, brand identity, social content and UI/UX — built on top of a technical foundation in IT infrastructure and network security that most designers never touch. Different tools, same instinct: take what something stands for, and give it a shape people remember.</p>
+        </div>
+        <div class="about-cards">
+          <div class="value-card glass reveal">
+            <div class="vc-row">
+              <span class="vc-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 19l7-7 3 3-7 7-3-3z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <div>
+                <h3>Visual Storytelling</h3>
+                <p>Every design choice — color, type, layout — is made to say something specific about the brand behind it.</p>
+              </div>
+            </div>
+          </div>
+          <div class="value-card glass reveal">
+            <div class="vc-row">
+              <span class="vc-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="2"/><rect x="14" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="2"/><rect x="3" y="14" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="2"/><rect x="14" y="14" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="2"/></svg></span>
+              <div>
+                <h3>Systems, Not One-Offs</h3>
+                <p>Logos, packaging and digital content built to work together as one coherent identity, not isolated assets.</p>
+              </div>
+            </div>
+          </div>
+          <div class="value-card glass reveal">
+            <div class="vc-row">
+              <span class="vc-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M9 11l3 3L22 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <div>
+                <h3>Detail-Obsessed Craft</h3>
+                <p>A technical background means production-ready files, clean handoffs and no surprises at print or launch.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== EXPERIENCE ============================== -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">Experience</div>
+        <h2>A career built one brief at a time.</h2>
+        <p class="lede">From print-ready packaging to campus identity systems, with a technical detour through enterprise IT — here's where the work has happened.</p>
+      </div>
+
+      <div class="timeline">
+
+        <div class="tl-item">
+          <span class="tl-dot"></span>
+          <div class="exp-card glass reveal">
+            <div class="exp-head">
+              <span class="exp-title">Graphic Designer</span>
+              <span class="exp-meta">JUN 2026 — PRESENT</span>
+            </div>
+            <span class="exp-company">Sankara College of Science and Commerce (Autonomous) · Coimbatore</span>
+            <p class="exp-desc">Shaping visual identity and academic communication for an autonomous institution — from campus collateral to digital presence.</p>
+            <div class="exp-tags"><span class="chip">Brand Identity</span><span class="chip">Print Collateral</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <span class="tl-dot"></span>
+          <div class="exp-card glass reveal">
+            <div class="exp-head">
+              <span class="exp-title">Graphic Designer</span>
+              <span class="exp-meta">APR 2025 — PRESENT</span>
+            </div>
+            <span class="exp-company">Dizen Pulse · Chennai</span>
+            <p class="exp-desc">Designing packaging, digital posters, brochures and booklets that pair creativity with function — work developed to enhance brand identity and communicate clearly with its audience.</p>
+            <div class="exp-tags"><span class="chip">Packaging</span><span class="chip">Posters</span><span class="chip">Brochures &amp; Booklets</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <span class="tl-dot"></span>
+          <div class="exp-card glass reveal">
+            <div class="exp-head">
+              <span class="exp-title">Graphic Designer</span>
+              <span class="exp-meta">APR 2025 — JUN 2026</span>
+            </div>
+            <span class="exp-company">AM Enterprises · Chennai</span>
+            <p class="exp-desc">Provided design support across branding and print collateral for a growing enterprise client.</p>
+            <div class="exp-tags"><span class="chip">Branding</span><span class="chip">Print Design</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <span class="tl-dot"></span>
+          <div class="exp-card glass reveal">
+            <div class="exp-head">
+              <span class="exp-title">TCS iON</span>
+              <span class="exp-meta">SEP 2024 — AUG 2025 · 1 YR 6 MO TOTAL</span>
+            </div>
+            <span class="exp-company">Coimbatore, Tamil Nadu</span>
+            <p class="exp-desc">A year and a half inside one of India's largest IT services ecosystems, across six roles spanning infrastructure, operations and security — the technical grounding that now informs every system I design.</p>
+            <div class="sub-roles">
+              <div class="sub-role"><span class="sr-role">IT Manager</span><span class="sr-date">Sep 2024 – Aug 2025</span></div>
+              <div class="sub-role"><span class="sr-role">Multi Operational Executive</span><span class="sr-date">Jul – Sep 2024</span></div>
+              <div class="sub-role"><span class="sr-role">Lab Supervisor</span><span class="sr-date">Jul – Aug 2024</span></div>
+              <div class="sub-role"><span class="sr-role">Multitasking Admin Force</span><span class="sr-date">Jun – Jul 2024</span></div>
+              <div class="sub-role"><span class="sr-role">CCTV Technician</span><span class="sr-date">Apr – May 2024</span></div>
+              <div class="sub-role"><span class="sr-role">Exam Invigilator</span><span class="sr-date">Mar – Apr 2024</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <span class="tl-dot"></span>
+          <div class="exp-card glass reveal">
+            <div class="exp-head">
+              <span class="exp-title">Graphic Designer</span>
+              <span class="exp-meta">OCT 2022 — AUG 2025</span>
+            </div>
+            <span class="exp-company">Self-Employed / Freelance · Coimbatore</span>
+            <p class="exp-desc">Nearly three years of independent design work — building brand and visual identity for clients outside the 9-to-5, one project at a time.</p>
+            <div class="exp-tags"><span class="chip">Freelance</span><span class="chip">Brand Identity</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <span class="tl-dot"></span>
+          <div class="exp-card glass reveal">
+            <div class="exp-head">
+              <span class="exp-title">Intern Graphic Designer</span>
+              <span class="exp-meta">OCT — NOV 2024</span>
+            </div>
+            <span class="exp-company">Skilz Learn · Coimbatore</span>
+            <p class="exp-desc">An early hands-on internship sharpening core design fundamentals and production workflow.</p>
+            <div class="exp-tags"><span class="chip">Internship</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <span class="tl-dot"></span>
+          <div class="exp-card glass reveal">
+            <div class="exp-head">
+              <span class="exp-title">Python Programmer</span>
+              <span class="exp-meta">MAY 2024</span>
+            </div>
+            <span class="exp-company">PumoTecnovation · Coimbatore</span>
+            <p class="exp-desc">A short, deliberate detour into code — proof that design and logic were never really separate disciplines.</p>
+            <div class="exp-tags"><span class="chip">Python</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== SKILLS ============================== -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">Skills</div>
+        <h2>A toolkit shaped by two disciplines.</h2>
+        <p class="lede">Design craft, sharpened by a technical foundation most designers never get the chance to build.</p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card glass reveal">
+          <span class="sk-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 7.2L22 12l-7.6 2.8L12 22l-2.4-7.2L2 12l7.6-2.8L12 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h3>Design Craft</h3>
+          <div class="sk-sub">Where the visual work happens</div>
+          <div class="skill-list">
+            <div class="skill-row"><b>Brand Identity</b>&nbsp;&amp; Logo Design</div>
+            <div class="skill-row"><b>Packaging Design</b></div>
+            <div class="skill-row"><b>Social &amp; Digital</b>&nbsp;Content</div>
+            <div class="skill-row"><b>UI / UX</b>&nbsp;Design</div>
+            <div class="skill-row"><b>Image Design</b>&nbsp;&amp; Editorial Layout</div>
+          </div>
+        </div>
+
+        <div class="skill-card glass reveal">
+          <span class="sk-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="12" rx="2" stroke="currentColor" stroke-width="2"/><path d="M8 20h8M12 16v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+          <h3>Technical Foundation</h3>
+          <div class="sk-sub">The infrastructure behind the craft</div>
+          <div class="skill-list">
+            <div class="skill-row"><b>IT Infrastructure</b>&nbsp;Management</div>
+            <div class="skill-row"><b>Network Security</b>&nbsp;(Fortinet NSE)</div>
+            <div class="skill-row"><b>Python</b>&nbsp;Programming</div>
+          </div>
+        </div>
+
+        <div class="skill-card glass reveal">
+          <span class="sk-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M5 8h14M5 8a2 2 0 100-4 2 2 0 000 4zM5 8a2 2 0 110 4 2 2 0 010-4zm10 8h4M9 16H5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="15" cy="16" r="2" stroke="currentColor" stroke-width="2"/></svg></span>
+          <h3>Languages</h3>
+          <div class="sk-sub">Communicating across audiences</div>
+          <div class="skill-list">
+            <div class="skill-row"><b>Tamil</b>&nbsp;— Native / Bilingual</div>
+            <div class="skill-row"><b>English</b>&nbsp;— Professional Working</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== CAPABILITIES / WORK ============================== -->
+  <section id="work">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">Selected Capabilities</div>
+        <h2>Where the work happens.</h2>
+        <p class="lede">Four disciplines, one consistent process — understand the brand, shape the visual language, deliver something that performs in the real world.</p>
+      </div>
+
+      <div class="work-grid">
+        <div class="work-card glass reveal">
+          <span class="wc-index">CAPABILITY — BRAND IDENTITY</span>
+          <h3>Brand Identity Systems</h3>
+          <p>Logos, color systems and type pairings built to hold up across packaging, print and screen — designed so a brand looks like itself everywhere it shows up.</p>
+          <div class="wc-steps"><span>Discover</span><span>Shape</span><span>Deliver</span></div>
+        </div>
+        <div class="work-card glass reveal">
+          <span class="wc-index">CAPABILITY — PACKAGING</span>
+          <h3>Packaging Design</h3>
+          <p>Structure-aware packaging and label design for Dizen Pulse and independent clients — built to work as hard on a shelf as it does in a product photo.</p>
+          <div class="wc-steps"><span>Discover</span><span>Shape</span><span>Deliver</span></div>
+        </div>
+        <div class="work-card glass reveal">
+          <span class="wc-index">CAPABILITY — SOCIAL &amp; DIGITAL</span>
+          <h3>Social &amp; Digital Content</h3>
+          <p>Posters, brochures and social-first visuals designed to stop a scroll and hold attention long enough to land the message.</p>
+          <div class="wc-steps"><span>Discover</span><span>Shape</span><span>Deliver</span></div>
+        </div>
+        <div class="work-card glass reveal">
+          <span class="wc-index">CAPABILITY — UI / UX</span>
+          <h3>UI / UX Design</h3>
+          <p>Seamless interface experiences grounded in a technical understanding of how systems actually work — informed directly by a background in IT infrastructure.</p>
+          <div class="wc-steps"><span>Discover</span><span>Shape</span><span>Deliver</span></div>
+        </div>
+      </div>
+
+      <div class="work-cta glass reveal">
+        <div>
+          <h3>The full body of work lives on Canva.</h3>
+          <p>Browse complete packaging, branding and social projects in the live portfolio.</p>
+        </div>
+        <a href="https://moorthy-graphicdesigner.my.canva.site/" target="_blank" rel="noopener" class="btn btn-primary">View Full Portfolio
+          <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M7 7h10v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== EDUCATION & CERTIFICATIONS ============================== -->
+  <section id="education">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">Education &amp; Certifications</div>
+        <h2>Formal training, hands-on proof.</h2>
+      </div>
+
+      <div class="edu-grid">
+        <div class="edu-card glass reveal">
+          <div class="edu-kicker">Education</div>
+          <h3>Diploma in Computer Science Engineering</h3>
+          <div class="edu-sub">Sankara Polytechnic College</div>
+          <div class="edu-date">2022 — 2025</div>
+        </div>
+
+        <div class="edu-card glass reveal">
+          <div class="edu-kicker">Certifications</div>
+          <div class="cert-list">
+            <div class="cert-item">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 2l8 4v6c0 5-3.4 8.7-8 10-4.6-1.3-8-5-8-10V6l8-4z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <div><div class="ci-name">Fortinet Network Security Associate</div><div class="ci-meta">Virtual Internship</div></div>
+            </div>
+            <div class="cert-item">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 19l7-7 3 3-7 7-3-3z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <div><div class="ci-name">Creator Course</div><div class="ci-meta">Completed certification</div></div>
+            </div>
+            <div class="cert-item">
+              <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="2"/><rect x="14" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="2"/><rect x="3" y="14" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="2"/><rect x="14" y="14" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="2"/></svg>
+              <div><div class="ci-name">AWS re/Start Graduate</div><div class="ci-meta">Amazon Web Services</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== TESTIMONIALS ============================== -->
+  <section id="testimonials">
+    <div class="container">
+      <div class="section-head reveal" style="margin-left:auto;margin-right:auto;text-align:center;">
+        <div class="eyebrow" style="justify-content:center;">Words From Collaborators</div>
+        <h2>What clients &amp; colleagues say.</h2>
+      </div>
+      <div class="testi-wrap reveal">
+        <div class="testi-card glass">
+          <svg class="tq" viewBox="0 0 24 24" fill="none"><path d="M9 7H5a2 2 0 00-2 2v4a2 2 0 002 2h2v2a3 3 0 01-3 3M19 7h-4a2 2 0 00-2 2v4a2 2 0 002 2h2v2a3 3 0 01-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3>This space is reserved for you.</h3>
+          <p>A quote from a client or teammate carries more weight than anything I could write myself. Once a few collaborators have shared their take on working together, their words will live right here.</p>
+          <a href="mailto:tr101010rt@gmail.com?subject=A%20testimonial%20for%20your%20portfolio" class="btn btn-ghost">Send a Testimonial</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== CONTACT ============================== -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">Contact</div>
+        <h2>Let's build something with a pulse.</h2>
+        <p class="lede">Have a brand, a product or a packaging project that needs a visual voice? I'd love to hear about it.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card glass reveal">
+          <div>
+            <h3>Direct Details</h3>
+            <p class="cc-sub">Based in Coonoor, The Nilgiris — open to remote and on-site design work.</p>
+          </div>
+          <div class="contact-list">
+            <a href="tel:8825777394">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <div><div class="cl-label">Phone</div><div class="cl-value">+91 88257 77394</div></div>
+            </a>
+            <a href="mailto:moorthyvisuals@gmail.com">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 4h16v16H4z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M4 6l8 7 8-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <div><div class="cl-label">Email</div><div class="cl-value">moorthyvisuals@gmail.com</div></div>
+            </a>
+            <a href="https://www.linkedin.com/in/moorthyxdesigner297" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="2"/><circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="2"/><path d="M10 9v12M10 13a4 4 0 018 0v8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              <div><div class="cl-label">LinkedIn</div><div class="cl-value">Moorthy X</div></div>
+            </a>
+            <a href="https://moorthy-graphicdesigner.my.canva.site/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M2 12h20M12 2a15 15 0 010 20 15 15 0 010-20z" stroke="currentColor" stroke-width="2"/></svg>
+              <div><div class="cl-label">Portfolio</div><div class="cl-value">Moorthy Portfolio</div></div>
+            </a>
+            <div class="ci-static">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 1118 0z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/></svg>
+              <div><div class="cl-label">Location</div><div class="cl-value">Coonoor, The Nilgiris — 643101</div></div>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form glass reveal" id="contactForm">
+          <h3 style="margin-bottom:24px;">Send a Brief</h3>
+          <div class="form-row">
+            <div class="field">
+              <label for="cf-name">Name</label>
+              <input id="cf-name" name="name" type="text" placeholder="Your name" required>
+            </div>
+            <div class="field">
+              <label for="cf-email">Email</label>
+              <input id="cf-email" name="email" type="email" placeholder="you@email.com" required>
+            </div>
+          </div>
+          <div class="field" style="margin-bottom:24px;">
+            <label for="cf-msg">Message</label>
+            <textarea id="cf-msg" name="message" placeholder="Tell me a little about your project..." required></textarea>
+          </div>
+          <div class="form-foot">
+            <span class="form-note">Opens your email app, addressed directly to Moorthy.</span>
+            <button type="submit" class="btn btn-primary">Send Message
+              <svg viewBox="0 0 24 24" fill="none"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+          <div class="form-status" id="formStatus" role="status"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================== FOOTER ============================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h3>Moorthy X</h3>
+        <p>Designed with intention, somewhere in the hills of the Nilgiris. Brand identity, packaging and digital design.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Site</h4>
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#skills">Skills</a>
+          <a href="#work">Capabilities</a>
+        </div>
+        <div class="footer-col">
+          <h4>Elsewhere</h4>
+          <a href="https://www.linkedin.com/in/moorthyxdesigner297" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://moorthy-graphicdesigner.my.canva.site/" target="_blank" rel="noopener">Portfolio</a>
+          <a href="mailto:moorthyvisuals@gmail.com">Email</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p id="footYear">&copy; 2026 Moorthy X. All rights reserved.</p>
+      <a href="#top" class="back-top" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---- nav scroll state ---- */
+  var nav = document.getElementById('siteNav');
+  function onScroll(){
+    if(window.scrollY > 24){ nav.classList.add('scrolled'); } else { nav.classList.remove('scrolled'); }
+  }
+  document.addEventListener('scroll', onScroll, { passive:true });
+  onScroll();
+
+  /* ---- mobile menu ---- */
+  var toggle = document.getElementById('navToggle');
+  var menu = document.getElementById('mobileMenu');
+  var scrim = document.getElementById('menuScrim');
+  function closeMenu(){
+    toggle.classList.remove('open'); toggle.setAttribute('aria-expanded','false');
+    menu.classList.remove('open'); scrim.classList.remove('open');
+  }
+  toggle.addEventListener('click', function(){
+    var open = menu.classList.toggle('open');
+    scrim.classList.toggle('open', open);
+    toggle.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  scrim.addEventListener('click', closeMenu);
+  menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeMenu); });
+
+  /* ---- scroll reveal ---- */
+  var revealEls = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window && !reduceMotion){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry, i){
+        if(entry.isIntersecting){
+          var delay = (entry.target.dataset.delay) || (i % 3) * 70;
+          entry.target.style.transitionDelay = delay + 'ms';
+          entry.target.classList.add('in-view');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold:0.12, rootMargin:'0px 0px -60px 0px' });
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('in-view'); });
+  }
+
+  /* ---- ambient blob parallax ---- */
+  var blobs = document.querySelectorAll('.ambient .blob');
+  if(!reduceMotion){
+    var ticking = false;
+    function applyParallax(){
+      var y = window.scrollY;
+      blobs.forEach(function(b, i){
+        var factor = 0.06 + i * 0.03;
+        b.style.transform = 'translate3d(0,' + (y * factor) + 'px,0)';
+      });
+      ticking = false;
+    }
+    document.addEventListener('scroll', function(){
+      if(!ticking){ window.requestAnimationFrame(applyParallax); ticking = true; }
+    }, { passive:true });
+  }
+
+  /* ---- cursor glow + magnetic buttons (pointer devices only) ---- */
+  var hasFinePointer = window.matchMedia('(pointer:fine)').matches;
+  var glow = document.getElementById('cursorGlow');
+  if(hasFinePointer && !reduceMotion){
+    glow.style.opacity = '1';
+    document.addEventListener('mousemove', function(e){
+      glow.style.transform = 'translate3d(' + e.clientX + 'px,' + e.clientY + 'px,0) translate(-50%,-50%)';
+    }, { passive:true });
+
+    document.querySelectorAll('.btn').forEach(function(btn){
+      btn.addEventListener('mousemove', function(e){
+        var r = btn.getBoundingClientRect();
+        var x = (e.clientX - r.left - r.width/2) * 0.28;
+        var y = (e.clientY - r.top - r.height/2) * 0.45;
+        btn.style.setProperty('--bx', x.toFixed(2));
+        btn.style.setProperty('--by', y.toFixed(2));
+      });
+      btn.addEventListener('mouseleave', function(){
+        btn.style.setProperty('--bx', 0); btn.style.setProperty('--by', 0);
+      });
+    });
+
+    var heroVisual = document.querySelector('.hero-visual');
+    var badge = document.querySelector('.badge-orbit');
+    if(heroVisual && badge){
+      heroVisual.addEventListener('mousemove', function(e){
+        var r = heroVisual.getBoundingClientRect();
+        var x = (e.clientX - r.left - r.width/2) * 0.04;
+        var y = (e.clientY - r.top - r.height/2) * 0.04;
+        badge.style.transform = 'translate3d(' + x + 'px,' + y + 'px,0)';
+      });
+      heroVisual.addEventListener('mouseleave', function(){ badge.style.transform = 'translate3d(0,0,0)'; });
+    }
+  } else {
+    glow.style.display = 'none';
+  }
+
+  /* ---- contact form -> mailto ---- */
+  var form = document.getElementById('contactForm');
+  var status = document.getElementById('formStatus');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = document.getElementById('cf-name').value.trim();
+    var email = document.getElementById('cf-email').value.trim();
+    var msg = document.getElementById('cf-msg').value.trim();
+    if(!name || !email || !msg){ status.textContent = 'Please fill in every field.'; return; }
+    var subject = encodeURIComponent('New project inquiry from ' + name);
+    var body = encodeURIComponent(msg + '\n\n— ' + name + ' (' + email + ')');
+    window.location.href = 'mailto:tr101010rt@gmail.com?subject=' + subject + '&body=' + body;
+    status.textContent = 'Opening your email app…';
+  });
+
+  /* ---- footer year ---- */
+  document.getElementById('footYear').textContent = '© ' + new Date().getFullYear() + ' Moorthy X. All rights reserved.';
+})();
+</script>
+
+</body>
+</html>
